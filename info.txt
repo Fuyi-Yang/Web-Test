@@ -1,0 +1,151 @@
+supersimple.dev/exercises/buttons
+supersimple.dev/exercises/text
+
+CSS code goes into <style></style>
+or write inside the opening tags of elements (inline styles)
+
+active and hover classes are examples of peudo classes in style
+
+spacing on the inside of a button is called padding.
+
+example text elements:( <strong> -> bold, <u> -> underline,
+                <span> -> nothing, but very useful because we
+                can add a class and make any modifications)
+
+include the basic structure of html: DOCTYPE..., html, head, body
+
+<body> contains all visible elements(<p>, <button>, ...)
+<head> contains all invisible elements, or elements
+not on the page(<title>, <style>)
+
+to automatically refresh code: install extension live server.\
+
+move all the CSS to a different file, then use <link> to link
+the css file into the html.
+
+void elements(like <link>) don't need a closing tag.
+
+element specific to images: object-fit, object-position
+
+display property in CSS:
+  There are three types of basic elements
+  1. block element = takes up the entire line(actually container)
+    ex. a paragraph <p>, by default, is a block element
+
+  2. inline-block element = takes up as much space as needed
+    ex. an image element, and input element
+  
+  3. inline element = text elements(appear within a line of text)
+    ex. <span>, <strong>, <u>
+
+use comma (,) when two classes have the same styles
+
+<div> is a very very important element.
+div means division = just a box.
+key feature - a div can contain other elements inside
+divs are containers.
+WE CAN GROUP THINGS TOGETHER
+
+
+Nested Layouts Technique***
+two types of layouts:
+  1. Vertical Layout
+  2. Horizontal Layout
+
+
+CSS grid is used to better create horizontal layouts.
+a grid is a layout that has rows and columns.
+
+fr  is a special value in grids and stands for free space\
+
+you can use padding in <body> to add space around the website.
+
+to add space between columns and rows of grids, there are two CSS properties:
+(both go in style, names are pretty self-explanetory.)
+  1. column-gap
+  2. row-gap
+
+
+Flexbox is another way to create layouts.
+similar to CSS grid, but is more flexible
+using flexbox, when an element is moved, the fexibility is also moved.
+
+justify-content  is a flexbox property and tells how the elements are laid out horizontally.
+start, end, center (how elements are positioned)
+space-between   spreads elements equally across the horizontal space.
+
+align-items    determines how elements align vertically.
+stretch, start, end, center
+
+******align-items and justify-content swap roles when we set 
+flex-direction: column;
+
+to prevent flexbox from shrinking, use
+flex-shrink: 0;
+
+to make flex box to shrink all the way, use
+width: 0;
+
+
+**flexbox vs grid**
+when focusing on content size first, use flexbox.
+When we want a grid, create grid.
+For other layouts, we can use either grid or flexbox.
+
+
+
+CSS Position
+can allow us to add another dimension to the page.
+Or allow things to stay when we scroll.
+
+position: static;  is the default position
+
+to fix an element, use =>   position: fixed; 
+doesn't take up the space anymore... it's like floating above the page
+
+
+position property has 4 special properties to move around:
+  1. top: _px;
+  the distance from the top of the browser to the element.
+  2. left: _px;
+  the distance from the left of the page to the element.
+  3. right: _px;
+  distance to right of page.
+  4. bottom: _px;
+  distance to bottom of page.
+
+we can also use height: _px;  and  width: _px;   to resize the element.
+
+when you want to move all content below the fixed element on the top, use
+padding-top: _px;  in the open <body> tag.
+or use margin, but padding is recommended.
+
+
+
+Position absolute and Relative
+
+position can take in the value: absolute
+it puts the element on the page, which means it moves when we scroll, as opposed
+to the fixed elements.
+It hovers above like fixed elements; the rest is also similar to fixed elements.
+we can overwrite this feature(moving above) with z-index;
+
+elements with higher z-index appear in front, default is 0;
+
+*****
+what makes absolute elements useful is that:
+when we place a position absolute element in a position fixed element, then the
+element will be placed relative to the position fixed element, not from the page.
+
+very useful when attaching things to corners of a section(like a X mark)
+
+
+when position absolute is inside position fixed element, it will not move when you
+scroll. To make the element scroll, we will use position: relative;
+
+
+Responsive Design: able to respond differently to different screen sizes.
+use media query =>  
+ @media (max-width: _px) {
+  
+ }
